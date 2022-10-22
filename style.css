@@ -1,0 +1,122 @@
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  background: linear-gradient(to bottom, black 0%, #0066ff 80%);
+  font-family: outfit;
+  color: white;
+  padding-block: 1.5rem !important;
+}
+.search-bar {
+  width: 100%;
+  transform: translateY(-50%);
+  position: relative;
+}
+.search-bar input {
+  width: 100%;
+  background: lightgray;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 0.75rem;
+  padding-left: 3rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25), 0 0 0 3px white;
+}
+.search-bar button {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  top: 0.75rem;
+  left: 1rem;
+}
+
+/* ============================================================== */
+.adsense .container{
+  overflow-x: hidden;
+}
+.adsense .swiper-ads {
+  overflow: visible;
+  position: relative;
+}
+
+.adsense .swiper-ads :where(.custom-swiper-navigation-prev, .custom-swiper-navigation-next) {
+  position: absolute;
+  top: calc(50% - 2rem);
+  z-index: 1;
+  border: none;
+  background: none;
+  color: white;
+  padding: 1rem;
+}
+.adsense .swiper-ads .custom-swiper-navigation-prev {
+  left: 0;
+}
+.adsense .swiper-ads .custom-swiper-navigation-next {
+  right: 0;
+}
+.adsense .swiper-ads .swiper-slide img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================== */
+.products {
+  font-family: outfit;
+}
+.products .categories {
+  display: flex;
+  margin-bottom: 1rem;
+  /* width: 100%; */
+  gap: 5px;
+  justify-content: space-between;
+  /* background: red; */
+}
+/* *{outline:1px solid} */
+.products .categories label {
+  background: lightgray;
+  padding: 0.375rem 0.75rem;
+  border-radius: 10px;
+}
+.products .categories input {
+  visibility: hidden;
+}
+.products .categories input:checked ~ label {
+  background: #0066ff;
+  color: white;
+}
+
+.products .product {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background: rgb(245, 245, 245);
+  /* align-items: flex-start; */
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.247);
+}
+
+.products .product img.product-img {
+  width: 30vw;
+  border-radius: 5px;
+  aspect-ratio: 1/1;
+}
+
+.products .product .product-title {
+  font-size: 1.1rem;
+  margin-block: 0;
+}
+.products .product .product-description{
+  text-align: justify;
+}
+.products .product .product-price {
+  color: red;
+}
+
+/* ============================================================== */
