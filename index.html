@@ -20,7 +20,16 @@
           <a href="#" class="navbar-brand"><h3>Zastya Creations</h3></a>
           <ul class="navbar-nav flex-row gap-3">
             <li class="nav-item">
-              <a href="#" class="nav-link text-light"><i class="bx bx-sm bxs-cart"></i></a>
+              <div class="dropdown">
+                <a role="button" class="nav-link text-light" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bx bx-sm bxs-cart"></i></a>
+                <ul class="dropdown-menu position-absolute dropdown-menu-end" style="max-width: 80vmin">
+                  <li class="dropdown-item text-center"><i class="bx bx-fw bxs-cart"></i>Keranjang</li>
+                  <li class="dropdown-divider"></li>
+                  <li class="px-3" style="width: 80vmin; text-align: justify">
+                    Mohon maaf, fitur ini belum tersedia. Silahkan kirim masukan atau saran ke <a href="//api.whatsapp.com/send?phone=6282323864176" target="_blank">Whatsapp Kami.</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id2" aria-controls="Id2"><i class="bx bx-sm bx-dots-vertical"></i></a>
@@ -47,6 +56,7 @@
         </div>
       </div>
     </header>
+
     <main>
       <section>
         <div class="adsense">
@@ -85,10 +95,6 @@
                 <input type="radio" name="category" value="pakaian" id="categoryPakaian" />
                 <label for="categoryPakaian">Pakaian</label>
               </div>
-              <!-- <div class="form-group">
-                <input type="radio" name="category" value="celana" id="categoryCelana" />
-                <label for="categoryCelana">Celana</label>
-              </div> -->
               <div class="form-group">
                 <input type="radio" name="category" value="makanan" id="categoryMakanan" />
                 <label for="categoryMakanan">Makanan</label>
@@ -98,82 +104,44 @@
                 <label for="categoryPeralatan">Peralatan</label>
               </div>
             </div>
-
-            <div class="product">
+            <div class="product-container"></div>
+            <div class="lightbox">
+              <button class="btn btn-danger btn-sm" onclick="hideImages()" style="z-index: 100000000; position: fixed; top: 1rem; right: 1rem"><i class="bx bx-x bx-fw"></i>Close</button>
+              <div class="lightbox-info">
+                <h4 class="lightbox-title"><i class="bx bx-fw bx-edit"></i><span>Nama Produk</span></h4>
+                <p class="lightbox-description opacity-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sapiente dolore cum vero eos error.</p>
+              </div>
+              <div class="">
+                <div class="swiper swiper-images">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/product/1.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/product/2.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/product/3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="custom-swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="product">
               <img src="assets/product/renot 8.jpg" class="product-img" alt="" />
               <div class="d-flex flex-column justify-content-between">
                 <h5 class="product-title">Nama Produk Disini</h5>
                 <small class="product-description mb-0 opacity-75">Lorem ipsum dolor sit amet, elit. Deleniti, expedita.</small>
                 <h5 class="product-price mt-auto mb-2">Rp. 9.999</h5>
                 <div class="product-footer mb-0 d-flex gap-2">
-                  <!-- <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-share"></i></button> -->
                   <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-image"></i>Lihat</button>
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-dislike"></i>12</button> -->
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-share"></i>Share</button> -->
                   <a href="//api.whatsapp.com/send?phone=6283195860340&text=Pesan%20produk%203242%20ka." class="btn btn-sm btn-success ms-auto flex-grow-1"><i class="bx bx-fw bxl-whatsapp"></i>Order Now</a>
                 </div>
               </div>
-            </div>
-            <div class="product">
-              <img src="assets/product/renot 8.jpg" class="product-img" alt="" />
-              <div class="d-flex flex-column justify-content-between">
-                <h5 class="product-title">Nama Produk Disini</h5>
-                <small class="product-description mb-0 opacity-75">Lorem ipsum dolor sit amet, elit. Deleniti, expedita.</small>
-                <h5 class="product-price mt-auto mb-2">Rp. 9.999</h5>
-                <div class="product-footer mb-0 d-flex gap-2">
-                  <!-- <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-share"></i></button> -->
-                  <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-image"></i>Lihat</button>
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-dislike"></i>12</button> -->
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-share"></i>Share</button> -->
-                  <a href="//api.whatsapp.com/send?phone=6283195860340&text=Pesan%20produk%203242%20ka." class="btn btn-sm btn-success ms-auto flex-grow-1"><i class="bx bx-fw bxl-whatsapp"></i>Order Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="product">
-              <img src="assets/product/renot 8.jpg" class="product-img" alt="" />
-              <div class="d-flex flex-column justify-content-between">
-                <h5 class="product-title">Nama Produk Disini</h5>
-                <small class="product-description mb-0 opacity-75">Lorem ipsum dolor sit amet, elit. Deleniti, expedita.</small>
-                <h5 class="product-price mt-auto mb-2">Rp. 9.999</h5>
-                <div class="product-footer mb-0 d-flex gap-2">
-                  <!-- <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-share"></i></button> -->
-                  <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-image"></i>Lihat</button>
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-dislike"></i>12</button> -->
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-share"></i>Share</button> -->
-                  <a href="//api.whatsapp.com/send?phone=6283195860340&text=Pesan%20produk%203242%20ka." class="btn btn-sm btn-success ms-auto flex-grow-1"><i class="bx bx-fw bxl-whatsapp"></i>Order Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="product">
-              <img src="assets/product/renot 8.jpg" class="product-img" alt="" />
-              <div class="d-flex flex-column justify-content-between">
-                <h5 class="product-title">Nama Produk Disini</h5>
-                <small class="product-description mb-0 opacity-75">Lorem ipsum dolor sit amet, elit. Deleniti, expedita.</small>
-                <h5 class="product-price mt-auto mb-2">Rp. 9.999</h5>
-                <div class="product-footer mb-0 d-flex gap-2">
-                  <!-- <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-share"></i></button> -->
-                  <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-image"></i>Lihat</button>
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-dislike"></i>12</button> -->
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-share"></i>Share</button> -->
-                  <a href="//api.whatsapp.com/send?phone=6283195860340&text=Pesan%20produk%203242%20ka." class="btn btn-sm btn-success ms-auto flex-grow-1"><i class="bx bx-fw bxl-whatsapp"></i>Order Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="product">
-              <img src="assets/product/renot 8.jpg" class="product-img" alt="" />
-              <div class="d-flex flex-column justify-content-between">
-                <h5 class="product-title">Nama Produk Disini</h5>
-                <small class="product-description mb-0 opacity-75">Lorem ipsum dolor sit amet, elit. Deleniti, expedita.</small>
-                <h5 class="product-price mt-auto mb-2">Rp. 9.999</h5>
-                <div class="product-footer mb-0 d-flex gap-2">
-                  <!-- <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-share"></i></button> -->
-                  <button class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-image"></i>Lihat</button>
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-dislike"></i>12</button> -->
-                  <!-- <button class="btn btn-sm p-0"><i class="bx bx-fw bx-share"></i>Share</button> -->
-                  <a href="//api.whatsapp.com/send?phone=6283195860340&text=Pesan%20produk%203242%20ka." class="btn btn-sm btn-success ms-auto flex-grow-1"><i class="bx bx-fw bxl-whatsapp"></i>Order Now</a>
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -204,19 +172,133 @@
           nextEl: ".custom-swiper-navigation-next",
         },
       });
-      // console.log(swiperAds);
+      const swiperImages = new Swiper(".swiper-images", {
+        spaceBetween: 25,
+        autoplay: true,
+        pagination: {
+          el: ".custom-swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+      });
       const products = [
         {
-          name: "Nama Produk Disini",
-          price: 9999,
-          thumbnail: "assets/product/renot 8.jpg",
-          images: ["assets/product/renot 8.jpg", "assets/product/renot 8.jpg", "assets/product/renot 8.jpg"],
+          code: "A001",
+          name: "Sosis Crispi",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 5000,
+          thumbnail: "assets/product/1.jpg",
+          images: ["assets/product/4.jpg"],
+        },
+        {
+          code: "A002",
+          name: "Sosis Gulung isi 3 Tusuk",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 3000,
+          thumbnail: "assets/product/2.jpg",
+          images: ["assets/product/8.jpg"],
+        },
+        {
+          code: "A003",
+          name: "Marsmellow Cokelat",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 1000,
+          thumbnail: "assets/product/3.jpg",
+          images: [],
+        },
+        {
+          code: "A005",
+          name: "Pisang Crispi Cokelat",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 500,
+          thumbnail: "assets/product/5.jpg",
+          images: [],
+        },
+        {
+          code: "A006",
+          name: "Pizza Mini",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 1000,
+          thumbnail: "assets/product/6.jpg",
+          images: [],
+        },
+        {
+          code: "A007",
+          name: "Permen Cokelat",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 500,
+          thumbnail: "assets/product/7.jpg",
+          images: [],
+        },
+        {
+          code: "A009",
+          name: "Sosis Mie",
+          description: "Lorem ipsum dolor sit amet, elit. Deleniti, expedita.",
+          price: 1000,
+          thumbnail: "assets/product/9.jpg",
+          images: [],
         },
       ];
       function order(id) {
         const data = products[id];
-        
       }
+
+      function setproduct() {
+        const container = document.querySelector(".product-container");
+        const formatter = new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          maximumFractionDigits: 0,
+        });
+        for (product of products) {
+          let elem = document.createElement("div");
+          elem.classList.add("product");
+          elem.innerHTML = `
+            <img src="${product.thumbnail}" class="product-img" alt="${product.name}'s image" />
+            <div class="d-flex flex-column justify-content-between">
+              <h5 class="product-title">${product.name}</h5>
+              <small class="product-description mb-0 opacity-75">Lorem ipsum dolor sit amet, elit. Deleniti, expedita.</small>
+              <h5 class="product-price mt-auto mb-2">${formatter.format(product.price)}</h5>
+              <div class="product-footer mb-0 d-flex gap-2">
+                <button onclick="showImages(${products.indexOf(product)})" class="btn-sm btn-outline-secondary btn"><i class="bx bx-fw bx-image"></i>Lihat</button>
+                <a href="//api.whatsapp.com/send?phone=6283195860340&text=Pesan%20produk%20${
+                  product.code + "-" + product.name
+                }%20ka." target="_blank" class="btn btn-sm btn-success ms-auto flex-grow-1"><i class="bx bx-fw bxl-whatsapp"></i>Order Now</a>
+              </div>
+            </div>
+          `;
+          container.appendChild(elem);
+        }
+      }
+
+      function hideImages() {
+        document.querySelector(".lightbox").classList.remove("active");
+      }
+      function showImages(id) {
+        const product = products[id];
+        document.querySelector(".lightbox .lightbox-title span").innerText = product.name;
+        document.querySelector(".lightbox").classList.add("active");
+        while (swiperImages.slides.length) {
+          swiperImages.removeSlide(0);
+        }
+        const elem = document.createElement("div");
+        elem.classList.add("swiper-slide");
+        elem.innerHTML = `<img src="${product.thumbnail}" alt="" />`;
+        swiperImages.appendSlide(elem);
+        for (img of product.images) {
+          const elem = document.createElement("div");
+          elem.classList.add("swiper-slide");
+          elem.innerHTML = `<img src="${img}" alt="" />`;
+          swiperImages.appendSlide(elem);
+        }
+        swiperImages.update();
+      }
+      document.querySelector(".lightbox").onclick = hideImages;
+      document.querySelector(".lightbox .swiper").onclick = (e) => e.stopPropagation();
+      setproduct();
     </script>
   </body>
 </html>

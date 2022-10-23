@@ -35,7 +35,7 @@ nav {
 }
 
 /* ============================================================== */
-.adsense .container{
+.adsense .container {
   overflow-x: hidden;
 }
 .adsense .swiper-ads {
@@ -94,7 +94,7 @@ nav {
 .products .product {
   margin-bottom: 0.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   border-radius: 5px;
   padding: 0.5rem;
   background: rgb(245, 245, 245);
@@ -104,7 +104,7 @@ nav {
 
 .products .product img.product-img {
   width: 30vw;
-  border-radius: 5px;
+  border-radius: 5%;
   aspect-ratio: 1/1;
 }
 
@@ -112,11 +112,50 @@ nav {
   font-size: 1.1rem;
   margin-block: 0;
 }
-.products .product .product-description{
+.products .product .product-description {
   text-align: justify;
 }
 .products .product .product-price {
   color: red;
+}
+
+.products .lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1011;
+  overflow: hidden;
+  background-color: rgba(50, 50, 50, 0.2) !important;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.products .lightbox:not(.active) {
+  visibility: hidden;
+}
+.products .lightbox .lightbox-info {
+  position: fixed;
+  bottom: 0;
+  left: 1rem;
+}
+
+.products .lightbox .swiper-images {
+  width: 95vmin;
+  overflow: visible;
+}
+.products .lightbox .swiper-images .swiper-slide {
+  /* background-color: blue; */
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+}
+.products .lightbox .swiper-images .swiper-slide img {
+  width: 100%;
+  border-radius: 5%;
+  aspect-ratio: 1/1;
 }
 
 /* ============================================================== */
